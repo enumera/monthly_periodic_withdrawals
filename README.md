@@ -20,13 +20,15 @@ Or install it yourself as:
 
 ## Usage
 
+Add require 'monthly_periodic_withdrawals' to you code if your not using rails.
+
 To calculate the number of months to deplete the principal on an interest-bearing account use the following:
 
 rate  =  0.008333 - Monthly rate of interest on the principal annual is 10%
 Monthly withdrawal = 200
 Starting Principal = 1000
 
-number_of_month_to_deplete_principal = MonthlyPeriodicWithdrawals(0.008333, 200, 1000)
+number_of_month_to_deplete_principal = MonthlyPeriodicWithdrawals.time_to_deplete(0.008333, 200, 1000)
 
 number_of_month_to_deplete_principal = 65
 
@@ -35,7 +37,7 @@ rate  =  0.008333 - Monthly rate of interest on the principal annual is 10%
 Monthly withdrawal = 200
 Starting Principal = 25000
 
-number_of_month_to_deplete_principal = MonthlyPeriodicWithdrawals(0.008333, 200, 25000)
+number_of_month_to_deplete_principal = MonthlyPeriodicWithdrawals.time_to_deplete(0.008333, 200, 25000)
 
 number_of_month_to_deplete_principal = "This monthly withdrawal will not deplete the principal"
 
